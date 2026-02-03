@@ -1,0 +1,8 @@
+
+{
+  "name": "Renata Sorci - Imóveis de Alto Padrão",
+  "description": "Plataforma imobiliária premium focada em consultoria especializada, segurança jurídica e atendimento personalizado para imóveis de luxo.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
