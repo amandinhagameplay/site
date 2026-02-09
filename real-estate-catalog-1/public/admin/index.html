@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decap CMS Admin</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        // Redirect to /admin after login
+        window.onload = function() {
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on('login', function() {
+                    window.location.href = '/admin';
+                });
+                window.netlifyIdentity.init();
+            }
+        };
+    </script>
+</head>
+<body>
+    <script>
+        // Initialize Netlify Identity
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.init();
+        }
+    </script>
+</body>
+</html>

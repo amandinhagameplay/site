@@ -1,0 +1,30 @@
+{
+  "name": "real-estate-catalog",
+  "version": "1.0.0",
+  "description": "A real estate catalog application using Decap CMS for content management.",
+  "main": "src/main.tsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "decap-cms": "^2.0.0",
+    "gray-matter": "^4.0.0"
+  },
+  "devDependencies": {
+    "vite": "^3.0.0",
+    "typescript": "^4.0.0"
+  },
+  "keywords": [
+    "real-estate",
+    "cms",
+    "decap-cms",
+    "vite",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT"
+}

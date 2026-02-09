@@ -7,7 +7,7 @@ export const PROPERTIES: Property[] = [
     title: 'Chácara Locação',
     type: PropertyType.CASA,
     businessType: BusinessType.COMPRAR,
-    price: 2000,
+    price: 2500,
     location: { neighborhood: 'Jardim Europa', city: 'São João da Boa Vista' },
     features: { bedrooms: 4, bathrooms: 6, parkingSpots: 4, area: 550 },
     imageUrl: '/images/imoveis/img1.jpg',

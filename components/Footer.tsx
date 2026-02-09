@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
               <li className="flex items-start space-x-3 group">
                 <MapPin className="text-gold-500 mt-1 flex-shrink-0" size={18} />
                 <span className="text-gray-500 text-sm">
-                  Rua Gabriel Ferreira nº 47 – Centro<br />
+                  Rua Oscar Janson, 261<br />
                   CEP: 13870-180 – São João da Boa Vista/SP
                 </span>
               </li>
