@@ -1,12 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Renata Sorci – Corretora de Imóveis</title>
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Fonte -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Netlify Identity (OBRIGATÓRIO) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- Tailwind config -->
     <script>
       tailwind.config = {
         theme: {
@@ -37,6 +49,8 @@
         }
       }
     </script>
+
+    <!-- Estilos base -->
     <style>
       body {
         font-family: 'Poppins', sans-serif;
@@ -57,23 +71,46 @@
         backdrop-filter: blur(10px);
       }
       .hero-gradient {
-        background: linear-gradient(to right, rgba(10, 42, 34, 0.9), rgba(10, 42, 34, 0.4));
+        background: linear-gradient(
+          to right,
+          rgba(10, 42, 34, 0.9),
+          rgba(10, 42, 34, 0.4)
+        );
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+
+    <!-- Import map -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+          "react/": "https://esm.sh/react@^19.2.4/",
+          "react": "https://esm.sh/react@^19.2.4",
+          "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+
   <body class="bg-luxury-beige text-luxury-dark antialiased">
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+
+    <!-- React -->
+    <script type="module" src="/index.tsx"></script>
+
+    <!-- Netlify Identity Redirect -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
