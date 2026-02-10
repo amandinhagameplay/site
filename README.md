@@ -1,3 +1,26 @@
+# Deploy e CMS no Netlify
+
+## Checklist para funcionamento correto
+
+1. Certifique-se de que o CSS está sendo carregado corretamente (verifique se está incluído no index.html ou importado nos componentes).
+2. Todos os assets (imagens, uploads) devem estar na pasta `public/images`.
+3. A pasta `public/images/uploads` deve existir para o Decap CMS salvar imagens.
+4. O backend do Decap CMS deve estar como `git-gateway` e o Netlify Identity e Git Gateway devem estar habilitados no painel Netlify.
+5. O arquivo `config.yml` deve estar correto (veja exemplo na pasta `public/admin`).
+6. O script de identidade deve estar incluído no `index.html` do admin.
+7. O build deve ser feito com `npm run build` e o diretório de publicação deve ser `dist`.
+8. O componente `PropertyList.tsx` lê os imóveis da pasta `src/content/imoveis`.
+
+## Como cadastrar imóveis
+
+1. Acesse `/admin` no seu site Netlify.
+2. Faça login (se não funcionar, habilite Identity e Git Gateway no painel Netlify).
+3. Cadastre imóveis normalmente.
+
+## Problemas comuns
+
+- Se o site aparece "quebrado" (sem CSS), verifique se o build está correto e se o CSS está sendo incluído.
+- Se o Decap CMS volta para a página inicial, habilite Identity e Git Gateway no painel Netlify.
 # Decap CMS (Netlify CMS) para gerenciamento de imóveis
 
 ## Como acessar o painel de administração
