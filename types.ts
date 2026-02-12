@@ -19,16 +19,17 @@ export interface Property {
   businessType: BusinessType;
   price: number;
   location: {
-    neighborhood: string;
-    city: string;
+    neighborhood?: string;
+    city?: string;
   };
   features: {
-    bedrooms: number;
-    bathrooms: number;
-    parkingSpots: number;
-    area: number;
+    bedrooms?: number;
+    bathrooms?: number;
+    parkingSpots?: number;
+    area?: number;
   };
   imageUrl: string;
+  images?: string[];
   isFeatured: boolean;
 }
 

@@ -32,14 +32,9 @@ export default function PropertyDetail() {
     );
   }
 
-  const images = [
-    property.imageUrl,
-    'https://picsum.photos/id/200/800/600',
-    'https://picsum.photos/id/201/800/600',
-    'https://picsum.photos/id/202/800/600',
-    'https://picsum.photos/id/203/800/600',
-    'https://picsum.photos/id/204/800/600',
-  ];
+  const images = property.images && property.images.length > 0
+  ? property.images
+  : [property.imageUrl];
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
